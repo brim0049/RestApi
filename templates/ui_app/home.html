@@ -1,0 +1,18 @@
+{% extends '../base.html' %}
+
+{% block title %}Acceuil{% endblock  %}
+
+{% block content %}
+<div class="card text-center">
+<div class="card">
+    <h5 class="card-header">Bienvenue sur l'interface administrateur </h5>
+    <div class="card-body">
+      <p class="card-text">Une interface d’administration permettant la gestion des utilisateurs (locateurs et locataires). 
+        De plus, elle permettra d’avoir des statistiques à partir des données présentes.</p>
+      <a href={% url 'utilisateurs' %} class="btn btn-dark">
+        Getion des utilisateurs <i class="fa-solid fa-angles-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock  %}

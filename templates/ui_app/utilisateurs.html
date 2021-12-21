@@ -1,0 +1,90 @@
+{% extends '../base.html' %} {% block title %}Utilisateurs{% endblock %} 
+{%block content %}
+<div class="card text">
+  <div class="card-header">
+    <form action="{% url 'utilisateurs' %}" method="GET">
+    
+
+      <div class="row justify-content-between">
+        <div class="col-4"></div>
+        <div class="form-group col-4">
+              <label class="col-form-label">Selectionner profil:</label>
+              <select
+                name="filterProfil"
+                class="form-control"
+                required
+              >
+                <option value="">Profil ...</option>
+                <option value="Locateur">Locateur</option>
+                <option value="Locataire">Locataire</option>
+              </select>
+        </div>
+      <button type="submit" class="btn btn-secondary">
+        <i class="fa-solid fa-filter"></i> Filtrer
+      </button>
+      </div>
+    </form>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="form-group row">
+        <div class="col-sm-3">
+          {% if status %}
+          <div class="alert alert-success" role="alert">
+            Utilisateur ajouter !
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Adresse e-mail</th>
+            <th scope="col">Profil</th>
+            <th scope="col">Derniere utilisation</th>
+            <th scope="col">Action #01</th>
+            <th scope="col">Action #02</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.profile.profil}}</td>
+            <td>{{user.last_login}}</td>
+            <td>
+              <form action="{% url 'user_delete' user.id %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">
+                  <i class="fa-solid fa-trash"></i> Supprimer
+                </button>
+              </form>
+            </td>
+            <td>
+              <form
+                action="{% url 'updatePassword' user.email %}"
+                method="POST"
+              >
+                {% csrf_token %}
+                <button type="submit" class="btn btn-secondary">
+                  <i class="fa-solid fa-pen"></i> Réintialiser
+                </button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <form method="POST" action="{% url 'addUser' %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-dark">
+          <i class="fa-solid fa-user-plus"></i> Ajouter
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

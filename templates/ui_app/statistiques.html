@@ -1,0 +1,58 @@
+{% extends '../base.html' %} {% block title %}Statistiques{% endblock %} 
+{%block content %}
+  <div class="card">
+    <h3 class="card-header">
+      <i class="fa-solid fa-chart-column"></i> Statistiques
+    </h3>
+    <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Nombre de locataires</td>
+            <td><strong>{{usersLocataire}}</strong></td>
+          </tr>
+          <tr>
+            <td>Nombre de locateurs</td>
+            <td><strong>{{usersLocateur}}</strong></td>
+          </tr> 
+          <tr>
+            <td>Nombre de chambres</td>
+            <td><strong>{{chambres}}</strong></td>
+          </tr>
+          <tr>
+            <td>Nombre de Reservations</td>
+            <td><strong>{{reservations}}</strong></td>
+          </tr>
+          <tr>
+            <td><h6>Selon le statuts des reservations</h6></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td> En attente</td>
+            <td><strong>{{reservationPending}}</strong></td>
+          </tr>
+          <tr>
+            <td> Actives</td>
+            <td><strong>{{reservationActive}}</strong></td>
+          </tr>
+          <tr>
+            <td> Expirées</td>
+            <td><strong>{{reservationExpired}}</strong></td>
+          </tr>
+          <tr>
+            <td>Bénéfice total</td>
+            <td><strong>{{benefice}}</strong></td>
+          </tr>
+          <tr>
+            <td>Total des sommes reçues</td>
+            
+            <td><strong>{{total}}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      </div>
+      <div>
+    </div>
+    
+  {% endblock %}
+</div>

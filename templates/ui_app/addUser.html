@@ -1,0 +1,61 @@
+{% extends '../base.html' %} {% block title %}ajouter utilisateur{% endblock %}
+{% block content %}
+<div class="card text">
+  <h5 class="card-header">Ajouter un utilisateur</h5>
+  <div class="card-body">
+    <form method="POST" action="">
+      {% csrf_token %}
+      
+      <div class="form-group">
+       <label> Nom d'utilisateur :</label>
+          {{ user_form.username }}
+      </div>
+      <div class="form-group">
+       <label>Genre :</label>
+          {{ profile_form.genre }}
+      </div>
+      <div class="form-group">
+       <label>Adresse e-mail :</label>
+          {{ user_form.email }}
+      </div>
+      <div class="form-group">
+        <label>Profil :</label>
+           {{ profile_form.profil }}
+       </div>
+       <div class="form-group">
+        <label>Mot de passe :</label>
+           {{ user_form.password }}
+       </div>
+       <div class="form-group">
+        <label>Confirmation :</label>
+           {{ profile_form.passwordConfirm }}
+       </div>
+      
+      <button type="submit" class="btn btn-success">
+        <i class="fa-solid fa-user-plus"></i> Ajouter
+      </button>
+      <a href={% url 'utilisateurs' %} class="btn btn-secondary">
+        <i class="fa-solid fa-xmark"></i> Annuler
+      </a>
+      <div class="form-group row">
+        <div class="col-sm-3">
+          {% if status %}
+          <div class="alert alert-danger" role="alert">
+            <i class="fa-solid fa-circle-xmark"></i> Mot de passe incorrecte !
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-3">
+          {% if mailstatus %}
+          <div class="alert alert-danger" role="alert">
+            <i class="fa-solid fa-circle-xmark"></i> adresse mail deja existant !
+          </div>
+          {% endif %}
+        </div>
+      </div> 
+    </form>
+  </div>
+</div>
+{% endblock %}
