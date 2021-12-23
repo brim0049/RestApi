@@ -22,7 +22,7 @@
 ![02](https://user-images.githubusercontent.com/75283741/147282157-cacea932-03d9-4a81-8500-e365f75c5379.PNG)
 4. Page d’ajouter un utilisateur :
 ![03](https://user-images.githubusercontent.com/75283741/147282159-b2a5ce26-bf74-4034-9829-99f5d170e7a4.PNG)
-- Il faut remplir tous les champs et s’assurer que les mots de passe soient identiques et que l’adresse e-mail n’existe pas déjà au risque d’avoir les erreurs en rouge.
+- Il faut remplir tous les champs et s’assurer que les mots de passe soient identiques et que l’adresse e-mail n’existe pas.
 ![04](https://user-images.githubusercontent.com/75283741/147282160-96294d39-0e10-465f-8b97-b18f8faad3a3.PNG)
 ![05](https://user-images.githubusercontent.com/75283741/147282161-41d7e4d1-3fd4-44df-a9f2-34ebe1aa0348.PNG)
 6. Page de réinitialisation du mot de passe :
