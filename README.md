@@ -4,16 +4,12 @@
 - Mise en place d’une API REST avec Django pour l’application en React.js,
 - Implémenter une authentification par jeton (Token) avec Django, 
 - Communication avec une API REST.
-
-<b/ >
-
 ## Technologies utilisées : 
 - Microsoft Visual Studio Code.
 - Les différents packages nécessaires (Django, Django Rest Framework, Swagger).
 - Pour l’aspect graphique; le Framework Twitter Bootstrap 5.
 - Pour les icônes; Font Awsome.
 - Environnement virtuel Python avec venv.
-
 ## Implémentation :
 ### Application pour l’interface d’administration (ui)
 #### Gestion des utilisateurs :
@@ -27,7 +23,6 @@
 4. Page d’ajouter un utilisateur :
 ![03](https://user-images.githubusercontent.com/75283741/147282159-b2a5ce26-bf74-4034-9829-99f5d170e7a4.PNG)
 - Il faut remplir tous les champs et s’assurer que les mots de passe soient identiques et que l’adresse e-mail n’existe pas déjà au risque d’avoir les erreurs en rouge.
-<br/>
 ![04](https://user-images.githubusercontent.com/75283741/147282160-96294d39-0e10-465f-8b97-b18f8faad3a3.PNG)
 ![05](https://user-images.githubusercontent.com/75283741/147282161-41d7e4d1-3fd4-44df-a9f2-34ebe1aa0348.PNG)
 6. Page de réinitialisation du mot de passe :
